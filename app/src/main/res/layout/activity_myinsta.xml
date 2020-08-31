@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Myinsta"
+    tools:context=".MyinstaActivity"
     android:padding="5dp">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:scaleType="centerInside"
         android:src="@drawable/jungminpic"
         app:layout_constraintDimensionRatio="1.0"
