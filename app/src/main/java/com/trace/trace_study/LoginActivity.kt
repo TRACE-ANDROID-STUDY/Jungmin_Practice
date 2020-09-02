@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.linear_login)
+        setContentView(R.layout.activity_login)
 
         if (MySharedPreferences.islogin) {
             Toast.makeText(this, "자동 로그인되었습니다", Toast.LENGTH_SHORT).show()
