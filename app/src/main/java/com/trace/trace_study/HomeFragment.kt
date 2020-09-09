@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.trace.trace_study.InstaRecyclerView.InstaAdapter
 import com.trace.trace_study.InstaRecyclerView.InstaData
+import com.trace.trace_study.InstaRecyclerView.Itemdecoration
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -28,6 +29,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         instaAdapter= InstaAdapter(view.context)
         rv_home.adapter=instaAdapter
+        rv_home.addItemDecoration(Itemdecoration(10))
         loadDatas()
     }
 
