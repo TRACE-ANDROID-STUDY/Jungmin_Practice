@@ -537,10 +537,10 @@ android:clipToPadding="false"
 
 - 나머지는 recyclerView와 동일 layout만 변화를 준 것
 
-  fragment_home.xml
+fragment_home.xml
 
-  ```xml
-  //recyclerView 내부
-  app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-  app:spanCount="3"
-  ```
+```xml
+//recyclerView 내부
+app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+app:spanCount="3"
+```
