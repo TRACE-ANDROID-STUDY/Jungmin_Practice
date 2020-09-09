@@ -8,6 +8,9 @@ class Itemdecoration(private val mSpace: Int) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         outRect.bottom = mSpace
+        outRect.left= mSpace
+        outRect.right= mSpace
+        outRect.top= mSpace
     }
 
 }
