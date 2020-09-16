@@ -54,42 +54,44 @@
         android:background="@color/colorBack"
         android:hint="비밀번호"
         android:inputType="textPassword"
+        android:paddingLeft="3dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
         app:layout_constraintEnd_toEndOf="@+id/editText"
         app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-    <ImageSwitcher
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/login_btn_autologin_picktouchguide"
+        android:layout_width="237dp"
+        android:layout_height="26dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="50dp"
-        android:background="@drawable/autologin_check"
+        android:background="@drawable/login_b_btn_autologin_disagree_pick"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="50dp"
+        android:background="@color/colorPrimary"
         android:text="로그인하기"
         app:layout_constraintEnd_toEndOf="@+id/editText2"
         app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_autologin_picktouchguide" />
 
     <TextView
         android:id="@+id/to_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="회원가입하기"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/btn_login"

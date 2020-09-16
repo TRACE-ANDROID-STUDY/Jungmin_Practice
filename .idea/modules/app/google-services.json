@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "13915976698",
+    "firebase_url": "https://tracestudy-96d1d.firebaseio.com",
+    "project_id": "tracestudy-96d1d",
+    "storage_bucket": "tracestudy-96d1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13915976698:android:2fdc9bb02190665bf92a43",
+        "android_client_info": {
+          "package_name": "com.trace.trace_study"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13915976698-86r9e8bvf496q5ffni1abl8esh8i920i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trace.trace_study",
+            "certificate_hash": "47e8e8f8de300f5eea54a7b1cb4504da9e6b3118"
+          }
+        },
+        {
+          "client_id": "13915976698-mbkptd7gdtbbldie0ihjhj8cos15fhtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ7ef-U59nVERpuXtio5OA0JR25FGLYyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13915976698-mbkptd7gdtbbldie0ihjhj8cos15fhtp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

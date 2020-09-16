@@ -8,13 +8,20 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.trace.trace_study.AutoLogin.MySharedPreferences
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+    var autologincheck : Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        auth = FirebaseAuth.getInstance()
 
         if (MySharedPreferences.islogin) {
             Toast.makeText(this, "자동 로그인되었습니다", Toast.LENGTH_SHORT).show()
@@ -22,6 +29,17 @@ class LoginActivity : AppCompatActivity() {
             var intent = Intent(this, MyinstaActivity::class.java)
             startActivity(intent)
             finish()
+        }
+        login_btn_autologin_picktouchguide.setOnClickListener {
+            if (autologincheck == false) {//false
+                login_btn_autologin_picktouchguide.setBackgroundResource(R.drawable.login_btn_autologinagree_pick)
+                autologincheck = true
+                //MySharedPreferences.islogin = true
+            } else {//true
+                login_btn_autologin_picktouchguide.setBackgroundResource(R.drawable.login_b_btn_autologin_disagree_pick)
+                autologincheck = false
+                MySharedPreferences.islogin = false
+            }
         }
 
         btn_login.setOnClickListener {
@@ -45,6 +63,16 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        updateUI(currentUser)
+    }
+    fun updateUI(currentUser:FirebaseUser?){
+
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK){
